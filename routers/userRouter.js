@@ -27,5 +27,11 @@ router.route('/:id').delete(async function(req,resp) {
     return resp.json(status);
 });
 
+// router.route('/:id').put(async function(req,resp) {
+//     let id = req.params.id;
+//     let obj = req.body;
+//     let status = await userBL.updateUserTasks(id, obj);
+//     return resp.json(status);
+// });
 
 module.exports = router;

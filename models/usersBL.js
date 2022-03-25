@@ -32,7 +32,9 @@ const updateUser  = (id, obj) => {
         email: obj.email,
         street: obj.street,
         city: obj.city,
-        zipcode: obj.zipcode 
+        zipcode: obj.zipcode,
+        tasks: obj.tasks,
+        posts: obj.posts
     },
          function(err) {
             if(err) {
@@ -43,6 +45,21 @@ const updateUser  = (id, obj) => {
         })
     } ) 
 }
+
+// const updateUserTasks  = (id, obj) => {
+//     return new Promise((resolve, reject) => {
+//         User.findByIdAndUpdate(id, {
+//             tasks: obj.tasks
+//     },
+//          function(err) {
+//             if(err) {
+//                 reject(err)
+//             } else {
+//                 resolve("Updated!");
+//             }
+//         })
+//     } ) 
+// }
 
 const deleteUser = function(id) {
     return new Promise((resolve,reject) => {
@@ -56,4 +73,4 @@ const deleteUser = function(id) {
     })
 }
 
-module.exports = {getUsers, getUser, updateUser, deleteUser};
+module.exports = {getUsers, getUser, updateUser, deleteUser, };
