@@ -73,4 +73,4 @@ const deleteUser = function(id) {
     })
 }
 
-module.exports = {getUsers, getUser, updateUser, deleteUser, };
+module.exports = {getUsers, getUser, updateUser, deleteUser };
